@@ -1,19 +1,24 @@
 ## Python - Downloads e Instalação
 https://www.python.org/downloads/
+
 Windows: https://www.python.org/ftp/python/3.11.3/python-3.11.3-amd64.exe
+
 MacOS: https://www.python.org/ftp/python/3.11.3/python-3.11.3-macos11.pkg
+
 Linux: 
+
 -- Procurar no GOOGLE, o repositório do python, pela distribuição. --
 Fedora: `sudo dnf install python3 python3-devel`
+
 Ubuntu: `sudo apt-get install python3 python3-dev`
 
-VENV - ambiente virtual e ativar
-Criar o ambiente virtual`
-`python -m venv <venv>
+### VENV - ambiente virtual e ativar
+Criar o ambiente virtual
+`python -m venv <venv>`
 
 Ativar
-Linux: `source <venv>/bin/activate`
-Windows: `<venv>\Scripts\activate.bat`
+- Linux: `source <venv>/bin/activate`
+- Windows: `<venv>\Scripts\activate.bat`
 PS.: Sempre que for criar um projeto lembre-se de verificar se a venv está ativa.
 
 ## DJANGO
@@ -172,7 +177,7 @@ context = {
 ```django
 {% for i in result.paginator.page_range %}
 <li>
-	<a href="?{% page=i %}">
+	<a href="?page={{ i }}">
 		{{ i }}
 	</a>
 </li>
